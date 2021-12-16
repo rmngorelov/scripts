@@ -22,7 +22,7 @@ if path.exists('./geckodriver') is False:
     os.system('tar -xvzf geckodriver*')
     os.system('rm *.gz')
     if path.exists('./geckodriver') is False:
-        print('geckodriver not found in current direcotory, please download manually.')
+        print('geckodriver not found in current directory, please download manually.')
         exit()
 
 from selenium.webdriver.firefox.service import Service
