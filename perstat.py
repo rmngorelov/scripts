@@ -3,8 +3,13 @@
 #run as executable: "./perstat.py Gomez" --- 'Gomez' is the argument
 #or run as: "python3 perstat.py Gomez" 
 
+from random import random
 import sys
 import os
+import time
+
+#wait a random time
+time.sleep(random() * 5 * 60)
 
 #check/install selenium
 try:
