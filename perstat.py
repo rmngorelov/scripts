@@ -58,6 +58,6 @@ submitbutton = browser.find_elements(By.CLASS_NAME, "appsMaterialWizButtonPaperb
 
 submitbutton[0].click() #click submit
 confirm = browser.find_element(By.CLASS_NAME, "freebirdFormviewerViewResponseConfirmationMessage") #print confirmation
-print(confirm.text)
+print(confirm.text,time.strftime('-- %H:%M:%S on %A, %d-%B-%Y'))
 
 browser.quit()
