@@ -49,7 +49,7 @@ namesList = [] #text of names
 for i in names:
     namesList.append(i.text.lower())
 
-print('input received --- ', inputUser)
+print('input received --', inputUser)
 
 namePosition = namesList.index(inputUser) #enters index of name. If this is an error, the name you entered is not found.
 radiobuttons = browser.find_elements(By.CLASS_NAME, "appsMaterialWizToggleRadiogroupElContainer") #counts radio buttons
