@@ -12,8 +12,12 @@ import time
 try:
     from selenium import webdriver
 except:
-    print("selenium not found, attempting to install. On error run 'sudo apt install python3-pip'.")
-    os.system('pip3 install selenium')
+    print("selenium not found, attempting to install.")
+    try:
+        os.system('pip3 install selenium')
+    except:
+        print("Run 'sudo apt install python3-pip', exiting")
+        exit()
     #from selenium import webdriver
     print("Run again.")
     exit()
