@@ -8,9 +8,6 @@ import sys
 import os
 import time
 
-#wait a random time
-time.sleep(random() * 5 * 60)
-
 #check/install selenium
 try:
     from selenium import webdriver
@@ -29,6 +26,11 @@ if path.exists('./geckodriver') is False:
     if path.exists('./geckodriver') is False:
         print('geckodriver not found in current directory, please download manually.')
         exit()
+
+
+#wait a random time
+time.sleep(random() * 5 * 60)
+
 
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.keys import Keys
