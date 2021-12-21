@@ -13,7 +13,7 @@ try:
     from selenium import webdriver
 except:
     print("selenium not found, attempting to install.")
-    os.system('pip3 install selenium')
+    os.system('pip3 install selenium') #on error run "sudo apt install python3-pip"
     from selenium import webdriver
 
 #check/install geckodriver
@@ -29,7 +29,7 @@ if path.exists('./geckodriver') is False:
 
 
 #wait a random time
-time.sleep(random() * 5 * 60)
+#time.sleep(random() * 5 * 60)
 
 
 from selenium.webdriver.firefox.service import Service
