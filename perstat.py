@@ -12,10 +12,10 @@ import time
 try:
     from selenium import webdriver
 except:
-    print("selenium not found, attempting to install.")
-    os.system('pip3 install selenium') #on error run "sudo apt install python3-pip"
+    print("selenium not found, attempting to install. On error run 'sudo apt install python3-pip'.")
+    os.system('pip3 install selenium')
     #from selenium import webdriver
-    print("run again.")
+    print("Run again.")
     exit()
 
 #check/install geckodriver
