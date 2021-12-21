@@ -16,7 +16,7 @@ except:
     try:
         os.system('pip3 install selenium')
     except:
-        print("Run 'sudo apt install python3-pip', exiting")
+        print("Run 'sudo apt install python3-pip', exiting.")
         exit()
     #from selenium import webdriver
     print("Run again.")
