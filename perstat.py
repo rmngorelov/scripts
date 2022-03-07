@@ -51,7 +51,9 @@ options.add_argument("--headless") #firefox headless option
 
 browser = webdriver.Firefox(options=options,service=s) 
 browser.get('https://docs.google.com/forms/d/e/1FAIpQLSdrErooFYWLLArmyLaINRAWzDF3TJ9ctaI0jH-F6qWHjQT_Sw/viewform') #go to site
-names = browser.find_elements(By.CLASS_NAME, "docssharedWizToggleLabeledLabelText") #find elements of names
+
+#names = browser.find_elements(By.CLASS_NAME, "docssharedWizToggleLabeledLabelText") #find elements of names
+names = browser.find_elements(By.CLASS_NAME, "ulDsOb") #find elements of names
 
 namesList = [] #text of names
 for i in names:
@@ -60,12 +62,20 @@ for i in names:
 print('input received --', inputUser)
 
 namePosition = namesList.index(inputUser) #enters index of name. If this is an error, the name you entered is not found.
-radiobuttons = browser.find_elements(By.CLASS_NAME, "appsMaterialWizToggleRadiogroupElContainer") #counts radio buttons
+
+#radiobuttons = browser.find_elements(By.CLASS_NAME, "appsMaterialWizToggleRadiogroupElContainer") #counts radio buttons
+radiobuttons = browser.find_elements(By.CLASS_NAME, "vd3tt")
+
 radiobuttons[namePosition].click() #clicks radio button
-submitbutton = browser.find_elements(By.CLASS_NAME, "appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel") #finds submit
+
+#submitbutton = browser.find_elements(By.CLASS_NAME, "appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel") #finds submit
+submitbutton = browser.find_elements(By.CLASS_NAME, "NPEfkd.RveJvd.snByac") #finds submit
 
 submitbutton[0].click() #click submit
-confirm = browser.find_element(By.CLASS_NAME, "freebirdFormviewerViewResponseConfirmationMessage") #print confirmation
+
+#confirm = browser.find_element(By.CLASS_NAME, "freebirdFormviewerViewResponseConfirmationMessage") #print confirmation
+confirm = browser.find_element(By.CLASS_NAME, "vHW8K") #print confirmation
+
 print(confirm.text,time.strftime('-- %H:%M:%S on %A, %d-%B-%Y'))
 
 browser.quit()
